@@ -10,11 +10,11 @@
     "module": "esnext",
     "moduleResolution": "node",
     "jsx": "react",
-    "rootDirs": ["src", "tests"],
-    "baseUrl": "src",
     "skipLibCheck": true,
     "allowSyntheticDefaultImports": true,
     "noEmit": true,
+    "rootDirs": ["src", "tests"],
+    "baseUrl": "src",
     "paths": {
       "@/*": ["*"],
       "@/tests/*": ["../tests/*"]
