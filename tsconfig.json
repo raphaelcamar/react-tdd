@@ -10,9 +10,6 @@
     "module": "esnext",
     "moduleResolution": "node",
     "jsx": "react",
-    "skipLibCheck": true,
-    "allowSyntheticDefaultImports": true,
-    "noEmit": true,
     "rootDirs": ["src", "tests"],
     "baseUrl": "src",
     "paths": {
