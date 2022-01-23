@@ -3,10 +3,10 @@ module.exports = {
   // '<rootDir>/tests'
   ],
   collectCoverageFrom: [
-    '<rootDir>/src/**/*.{ts,tsx}'
+    '<rootDir>/src/**/*.{ts,tsx}',
     // '!<rootDir>/src/main/**/*',
     // '!<rootDir>/src/**/index.ts',
-    // '!**/*.d.ts'
+    '!**/*.d.ts'
   ],
   coverageDirectory: 'coverage',
   // setupFilesAfterEnv: ['<rootDir>/src/main/config/jest-setup.ts'],
@@ -20,7 +20,7 @@ module.exports = {
   },
   moduleNameMapper: {
     // '@/tests/(.*)': '<rootDir>/tests/$1',
-    '@/(.*)': '<rootDir>/src/$1'
-    // '\\.scss$': 'identity-obj-proxy'
+    '@/(.*)': '<rootDir>/src/$1',
+    '\\.scss$': 'identity-obj-proxy'
   }
 }
