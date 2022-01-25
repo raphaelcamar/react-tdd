@@ -1,10 +1,6 @@
-import LoginHeader from '@/presentation/components/login-header/login-header'
-
 import React from 'react'
 import Styles from './login-styles.scss'
-import LoginFooter from '@/presentation/components/footer/footer'
-import Input from '@/presentation/components/input/input'
-import FormStatus from '@/presentation/components/form-status/form-status'
+import { Footer, FormStatus, Input, LoginHeader } from '@/presentation/components'
 
 const Login: React.FC = () => {
   return (
@@ -19,7 +15,7 @@ const Login: React.FC = () => {
         <span className={Styles.link}>Criar conta</span>
         <FormStatus />
       </form>
-      <LoginFooter />
+      <Footer />
     </div>
   )
 }
