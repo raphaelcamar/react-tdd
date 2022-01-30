@@ -23,6 +23,14 @@
   }
   .submit{
     margin-top: 36px;
+
+    &:disabled {
+      background: $disabledBackground;
+      color: $disabledColor;
+      &:hover {
+        opacity: 1;
+      }
+    }
   }
   .link {
     text-align: center;
