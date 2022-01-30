@@ -17,7 +17,8 @@
       "@/tests/*": ["../tests/*"]
     },
     "allowJs": true,
-    "resolveJsonModule": true
+    "resolveJsonModule": true,
+    "skipLibCheck": true
   },
   "include": ["src", "tests"],
   "exclude": ["tests/e2e/cypress"]
