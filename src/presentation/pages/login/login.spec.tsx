@@ -1,22 +1,11 @@
 import React from 'react'
 import { render, RenderResult, fireEvent, cleanup } from '@testing-library/react'
 import Login from './index'
-import { Validation } from '@/presentation/protocols/validation'
+import { ValidationSpy } from '@/presentation/test/mock-validation'
 
 type SutTypes = {
   sut: RenderResult
   validationSpy: ValidationSpy
-}
-
-class ValidationSpy implements Validation {
-  errorMessage: string
-  fieldName: string
-  fieldValue: string
-  validate (fieldName: string, fieldValue: string): string {
-    this.fieldName = fieldName
-    this.fieldValue = fieldValue
-    return this.errorMessage
-  }
 }
 
 const makeSut = (): SutTypes => {
@@ -62,8 +51,11 @@ describe('Login component', () => {
     const { sut, validationSpy } = makeSut()
 
     const passwordInput = sut.getByTestId('password')
+
     fireEvent.input(passwordInput, { target: { value: 'any_password' } })
+
     expect(validationSpy.fieldName).toBe('password')
+
     expect(validationSpy.fieldValue).toBe('any_password')
   })
 })
