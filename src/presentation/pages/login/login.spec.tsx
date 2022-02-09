@@ -24,6 +24,7 @@ const makeSut = (): SutTypes => {
 
 describe('Login component', () => {
   afterEach(cleanup)
+
   test('Should start with initial state', () => {
     const { sut, validationStub } = makeSut()
     const errorWrap = sut.getByTestId('error-wrap')
@@ -99,5 +100,22 @@ describe('Login component', () => {
     expect(emailStatus.title).toBe('Tudo certo')
 
     expect(emailStatus.textContent).toBe('🟢')
+  })
+
+  test('Should enable submit button if form is valid', () => {
+    const { sut, validationStub } = makeSut()
+
+    validationStub.errorMessage = null
+
+    const passwordInput = sut.getByTestId('password')
+
+    fireEvent.input(passwordInput, { target: { value: faker.internet.password() } })
+
+    const emailInput = sut.getByTestId('email')
+
+    fireEvent.input(emailInput, { target: { value: faker.internet.email() } })
+
+    const submitButton = sut.getByTestId('submit') as HTMLButtonElement
+    expect(submitButton.disabled).toBe(false)
   })
 })
