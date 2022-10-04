@@ -4,21 +4,23 @@
       "version": "detect"
     }
   },
- "extends": [
-  "standard-with-typescript",
-  "plugin:react/recommended"
- ],
- "plugins": ["react"],
- "parserOptions": {
-   "project": "./tsconfig.json"
- },
- "rules": {
-  "@typescript-eslint/consistent-type-definitions": "off",
-  "@typescript-eslint/strict-boolean-expressions": "off",
-  "@typescript-eslint/camelcase": "off",
-  "@typescript-eslint/no-unused-vars": "off",
-  "@typescript-eslint/method-signature-style": "off",
-  "react/jsx-uses-react": "error",
-  "react/jsx-uses-vars": "error"
- }
+  "extends": [
+    "standard-with-typescript",
+    "plugin:react/recommended"
+  ],
+  "plugins": ["react"],
+  "parserOptions": {
+    "project": "./tsconfig.json"
+  },
+  "rules": {
+    "@typescript-eslint/consistent-type-definitions": "off",
+    "@typescript-eslint/strict-boolean-expressions": "off",
+    "@typescript-eslint/comma-spacing": "off",
+    "@typescript-eslint/camelcase": "off",
+    "@typescript-eslint/no-unused-vars": "off",
+    " @typescript-eslint/return-await": "off",
+    "@typescript-eslint/method-signature-style": "off",
+    "react/jsx-uses-react": "error",
+    "react/jsx-uses-vars": "error"
+  }
 }

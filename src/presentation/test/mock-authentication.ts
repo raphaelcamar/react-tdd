@@ -9,7 +9,6 @@ export class AuthenticationSpy implements Authentication {
   async auth (params: AuthenticationParams): Promise<AccountModel> {
     this.params = params
     this.callsCount++
-    // eslint-disable-next-line @typescript-eslint/return-await
-    return Promise.resolve(this.account)
+    return this.account
   }
 }
